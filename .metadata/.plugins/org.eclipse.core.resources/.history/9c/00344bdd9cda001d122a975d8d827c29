@@ -1,0 +1,54 @@
+package Flip_kart;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Flip_kart_flights {
+
+	
+	
+	
+	public static void Auto_Textbox(List<WebElement> element,String name) {
+		
+		for(WebElement ele:element) {
+		      String nam=	ele.getText();
+		      if(nam.equalsIgnoreCase(name)) {
+		    	  ele.click();
+		    	  break;
+		      }
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver,chrome,driver", ".\\driver\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.get("https://www.flipkart.com/");
+		driver.findElement(By.xpath("//button[@class='_2KpZ6l _2doB4z']")).click();
+		driver.findElement(By.xpath("//div[text()='Flights']")).click();
+		driver.findElement(By.xpath("//input[@id=\"ROUND_TRIP\"]/../div[1]")).click();
+		driver.findElement(By.xpath("//label[text()='From']/../input")).sendKeys("Mum");
+		List<WebElement> element=driver.findElements(By.xpath("//label[text()='From']/../following-sibling::div//div/span[1]"));
+		Auto_Textbox(element,"Mumbai");
+		
+		
+		
+		
+		
+	}
+	
+	
+}

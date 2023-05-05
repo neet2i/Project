@@ -1,0 +1,14 @@
+package assignment;
+
+public class Example3 {
+	
+	
+	public int computeDivision()
+	{
+		return (100 / 10);
+	}
+	//int c = computeDivision();
+	{ 
+		System.out.println("computeDivision()");
+}
+}

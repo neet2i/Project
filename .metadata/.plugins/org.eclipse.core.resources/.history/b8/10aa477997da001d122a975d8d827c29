@@ -1,0 +1,23 @@
+package Flip_kart;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Flip_kart_flights {
+
+	
+	
+	
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver,chrome,driver", ".\\driver\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+	
+		
+		
+		
+		
+	}
+	
+	
+}
